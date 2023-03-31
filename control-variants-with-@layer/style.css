@@ -1,0 +1,30 @@
+@layer components.buttons {
+    .btn {
+        background: hsl(0 0% 50% / 50%);
+        border: none;
+        border-radius: 5px;
+        padding: 1ch 2ch;
+    }
+}
+
+@layer demo.support {
+    * {
+        box-sizing: border-box;
+        margin: 0;
+    }
+
+    html {
+        block-size: 100%;
+        color-scheme: dark light;
+    }
+
+    body {
+        min-block-size: 100%;
+        font-family: system-ui, sans-serif;
+
+        display: grid;
+        place-content: center;
+        place-items: center;
+        gap: 5vmin;
+    }
+}
