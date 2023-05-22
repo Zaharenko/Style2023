@@ -1,0 +1,252 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap');
+
+:root {
+    --font-family: 'Roboto', sans-serif;
+    --yellow: #FFDD2D;
+    --title-color: #111111;
+    --text-color: #333333;
+    --text-color2: #808C9E;
+    --bg-color: #F1F3F5;
+    --link-color: #597DB3;
+}
+
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    font-family: var(--font-family);
+    background-color: #fff;
+    padding-block: 80px;
+    padding-inline: 200px 616px;
+}
+
+a{
+    cursor: pointer;
+}
+
+
+li {
+    list-style-type: none;
+}
+
+article{
+    padding: 48px;
+    border: 1px solid #DCE2E8;
+}
+
+section {
+    margin-bottom: 48px;
+}
+
+section:last-child {
+    margin-bottom: 30px;
+}
+
+section h2{
+    margin-bottom: 16px;
+    font: normal 400 28px/32px var(--font-family);
+    font-feature-settings: 'liga' off;
+    color: var(--text-color);
+    display: flex;
+    align-items: center;
+}
+
+section h2 a{
+    text-decoration: none;
+    color: var(--link-color);
+}
+
+section p,
+section li {
+    font: normal 400 17px/28px var(--font-family);
+    color: var(--text-color);
+    margin-bottom: 16px;
+}
+
+section p span,
+section li span{
+    font-weight: bold;
+}
+
+section p:last-child{
+    margin-bottom: 0;
+}
+
+
+.title-img {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    margin-bottom: 40px;
+}
+
+.title{
+    width: calc(100% - 80px);
+    margin-right: 77px;
+}
+
+.title-img span {
+    display: inline-block;
+    font: normal 700 13px/20px var(--font-family);
+    color: var(--text-color);
+    background-color: var(--yellow);
+    padding: 2px 10px 4px;
+    margin-bottom: 12px;
+}
+
+.title-img h1 {
+    font: normal 400 36px/44px var(--font-family);
+    color: var(--title-color);
+    font-feature-settings: 'liga' off;
+}
+
+.title-img img {
+    object-fit: cover;
+    object-position: center;
+    height: 80px;
+    width: 80px;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    background: var(--bg-color);
+}
+
+.post-tag p{
+    margin-bottom: 8px;
+    color: var(--text-color2);
+}
+
+.post-tag span{
+    display: inline-block;
+    font: normal 400 17px/28px var(--font-family);
+    background-color: var(--bg-color);
+    color: var(--text-color2);
+    position: relative;
+    padding-left: 10px;
+}
+
+.post-tag span::before{
+    content: '#';
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+address{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+address img{
+    height: 36px;
+    padding: 14px;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    background: var(--bg-color);
+}
+
+.author{
+    margin-left: 16px;
+    max-width: 208px;
+}
+
+.author p:first-child{
+    color: var(--text-color);
+    font: normal 400 15px/20px var(--font-family);
+}
+
+.author p{
+    color: var(--text-color2);
+    font-size: 14px;
+}
+
+.post-info{
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    margin-top: 48px;
+}
+
+.post-info p{
+    color: var(--text-color2);
+}
+
+.post-info a{
+    color: var(--link-color);
+    font: normal 400 15px/24px var(--font-family);
+}
+
+.icon{
+    width: 22px;
+    height: 10px;
+    stroke: var(--title-color);
+    margin-inline: 8px;
+}
+
+.icon:hover{
+    stroke: var(--link-color);
+}
+
+@media screen and (max-width: 1366px) {
+    body{
+        padding-inline: 80px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .title-img h1 {
+        font: normal 400 24px/28px var(--font-family);
+    }
+    .post-tag span {
+        display: inline-block;
+        font: normal 400 15px/24px var(--font-family);
+    }
+    section p, section li{
+        display: inline-block;
+        font: normal 400 15px/24px var(--font-family);
+    }
+    section h2 {
+        font: normal 400 28px/32px var(--font-family);
+    }
+    .title-img {
+        margin-bottom: 28px;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    body{
+        padding-inline: 16px;
+        padding-block: 16px;
+    }
+    article{
+        padding: 24px;
+    }
+    section {
+        margin-bottom: 36px;
+    }
+    section:last-child {
+        margin-bottom: 28px;
+    }
+    .title-img {
+        flex-direction: column;
+    }
+    .title {
+        width: 100%;
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+    .post-info {
+        flex-direction: column;
+        margin-top: 36px;
+    }
+    .post-info p {
+        margin-bottom: 8px;
+    }
+    .media-column{
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}
